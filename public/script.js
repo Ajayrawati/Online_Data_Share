@@ -2,7 +2,7 @@ function Share() {
     const id = document.getElementById("share-id").value;
     const data = document.getElementById("input-field").value;
 
-    fetch("http://localhost:8000/v1/", {
+    fetch("https://online-data-share.vercel.app/v1/", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -17,5 +17,5 @@ function Share() {
         console.error("Error:", error);
     });
 
-    window.location.href = `http://localhost:8000/v1/${id}`;
+    window.location.href = `https://online-data-share.vercel.app/v1/${id}`;
 }
