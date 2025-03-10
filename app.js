@@ -15,7 +15,8 @@ app.use(express.json());
 
 // Serve static files correctly
 app.use(express.static(path.join(__dirname, "public")));
-
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "views")); 
 // Serve `index.html` when visiting `/`
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "public", "index.html"));
