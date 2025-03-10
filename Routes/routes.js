@@ -19,7 +19,7 @@ router.post("/", async (req, res) => {
     }
 });
 router.get("/",()=>{
-    res.sendFile(__dirname + '/public/index.html');
+    res.sendFile(__dirname + '../public/index.html');
 })
 
 // GET route to retrieve data by `data` parameter
