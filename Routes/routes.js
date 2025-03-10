@@ -25,7 +25,7 @@ router.get("/",()=>{
 // GET route to retrieve data by `data` parameter
 router.get("/:data", async (req, res) => {
 
-    
+    console.log(req.params.data);
     try {
         const savedData = await Data.findOne({ urlId: req.params.data });
 
