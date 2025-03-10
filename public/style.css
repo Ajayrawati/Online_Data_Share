@@ -1,0 +1,149 @@
+body {
+    background-color: #F2EFE9;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+#input-field {
+    width: 75%;
+    margin: 10px auto; 
+    display: block; 
+    padding: 10px; 
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 16px; 
+    height: 500px; 
+    resize: none; 
+}
+#share-id{
+    display: block;
+    padding: 10px; 
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Flexbox for button & dropdown alignment */
+#tog {
+    display: flex;
+    justify-content: center; /* Centers content */
+    align-items: center;
+    gap: 15px; /* Adds spacing between elements */
+    margin-top: 20px;
+}
+
+#button-final {
+    width: 150px;
+    padding: 10px 15px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #564E58;
+    color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+#button-final:hover {
+    background-color: #403A40;
+    transform: scale(1.05);
+}
+
+#button-final:active {
+    background-color: #2E2A2F;
+    transform: scale(0.95);
+}
+
+/* Styling for the dropdown */
+#drop {
+    width: 160px;
+    height: 40px;
+    padding: 5px;
+    font-size: 16px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+    text-align: center;
+}
+h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+#drop:hover, #drop:focus {
+    background-color: #E6E6E6;
+}
+
+
+@media (max-width: 600px) {
+    .main-div {
+        width: 90%;
+    }
+
+    #tog {
+        flex-direction: column; /* Stack elements on small screens */
+    }
+
+    #button-final, #drop {
+        width: 100%;
+    }
+}
+
+.txt-file{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+@media (max-width: 768px) {
+    #input-field {
+        width: 90%; /* Makes the input field wider on smaller screens */
+        height: 300px; /* Adjusts height for better usability */
+    }
+
+    #share-id {
+        width: 90%;
+        margin-left: 40px; /* Ensures the share ID field scales properly */
+    }
+
+    #tog {
+        flex-direction: column; /* Stacks elements vertically */
+        align-items: center;
+        gap: 10px;
+    }
+
+    #button-final, #drop {
+        width: 90%; /* Makes the button and dropdown full-width */
+    }
+
+    .txt-file {
+        width: 90%;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 20px; /* Slightly reduces heading size */
+    }
+
+    #input-field {
+        height: 250px; /* Further reduces height for very small screens */
+    }
+
+    #button-final {
+        font-size: 16px;
+        padding: 8px 12px;
+    }
+
+    #drop {
+        font-size: 14px;
+        height: 38px;
+    }
+}

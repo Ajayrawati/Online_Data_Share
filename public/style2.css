@@ -1,0 +1,101 @@
+/* General Styles */
+body {
+    background-color: #F2EFE9;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensures full screen coverage */
+    text-align: center;
+}
+
+/* Container */
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    padding: 20px;
+}
+
+/* Heading */
+.txt-file h1 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+
+#main-div {
+    width: 95%; /* Increased width for better visibility */
+    min-height: 200px; /* Ensures text is always visible */
+    max-height: 500px; /* Prevents overflow from making the box too large */
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 10px;
+    background-color: white;
+    overflow-y: auto; /* Enables scrolling only when necessary */
+    word-wrap: break-word; /* Prevents long words from overflowing */
+}
+
+/* Responsive Design */
+@media (max-width: 800px) {
+    #main-div {
+        width: 100%; /* Uses full width on smaller screens */
+        max-width: none; /* Removes width limit for flexibility */
+    }
+}
+
+#main-div pre {
+    text-align: left;  /* Aligns text to the left */
+    white-space: pre-wrap; /* Ensures text wraps properly */
+    word-wrap: break-word; /* Breaks long words */
+    font-family: monospace; /* Keeps a consistent font */
+    padding: 10px;
+}
+
+/* Copy Button */
+#copy-btn {
+    width: 150px;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #564E58;
+    color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin-top: 20px;
+}
+
+#copy-btn:hover {
+    background-color: #403A40;
+    transform: scale(1.05);
+}
+
+#copy-btn:active {
+    background-color: #2E2A2F;
+    transform: scale(0.95);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .txt-file h1 {
+        font-size: 18px; /* Reduce heading size for small screens */
+    }
+
+    #main-div {
+        min-height: 150px;
+        max-height: 400px; /* Keeps visibility better on smaller screens */
+    }
+
+    #copy-btn {
+        width: 100%; /* Make button full-width */
+        font-size: 16px;
+    }
+}
